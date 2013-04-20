@@ -1,67 +1,186 @@
 @CHARSET "UTF-8";
 
+body {
+	font-size: 12px;
+}
+
 #container {
 	width: 790px;
 	margin: 0 auto;
 }
 
-ul, ol, li, p, div, h1, h2, h3, h4, h5, h6, form, fieldset, input {
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
+ul, ol, li, p, div, h1, h2, h3, h4, h5, h6, form, fieldset {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
 }
 ol li{
-    margin-left:25px;
+	margin-left:25px;
 }
 fieldset{
   border:none;
 }
 
-/** header **/
+/** Header **/
 header {
 	
 }
 header nav {
-    background-color: #F0F8FF; /** AliceBlue **/
+	background-color: #F0F8FF; /* AliceBlue */
 }
 header nav ul {
-    list-style: none;
-    display: block;
-    margin: 0 0 10px;
+	list-style: none;
+	display: block;
+	margin: 0 0 10px;
 }
 header nav ul li {
 	float: left;
 	display: block;
-    margin: 10px 0px 10px 10px;
+	margin: 10px 0px 10px 10px;
 }
 header nav ul:after {
 	clear: both;
 }
+/** Header - end **/
 
 
-
-
-/** content **/
+/** Content **/
+h1 {
+	margin: 0.5em 0;
+}
+h3 {
+	margin: 0.5em 0 1em;
+}
 p {
 	margin: 5px 0 10px;
 }
 p.label {
 	margin: 5px 0 0;
 }
+p.error {
+    padding-left: 32px;
+    background-image: url(../i/ico/fam/silk/delete.png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+p.success {
+    padding-left: 32px;
+    background-image: url(../i/ico/fam/silk/accept.png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
 pre {
 	margin: 5px 0 15px;
-	background-color: #F5F5DC; /** Beige  **/
+	background-color: #F5F5DC; /* Beige  */
 }
 
+ul.list {
+	list-style: none;
+	margin: 5px 0 20px;
+}
+ul.list li {
+	margin: 0 0 5px;
+}
+ul.technologies li {
+	padding: 0 0 0 20px;
+	background-image: url(../i/ico/bijou/Tick.png);
+	background-repeat: no-repeat;
+	background-position: 2px 4px;
+}
+ul.references li {
+	padding: 0 0 0 20px;
+	background-image: url(../i/ico/bijou/Signpost.png);
+	background-repeat: no-repeat;
+	background-position: 2px 3px;
+}
+ul.repository li {
+    padding: 0 0 0 18px;
+    background-image: url(../i/ico/bijou/Box.png);
+    background-repeat: no-repeat;
+    background-position: 2px 4px;
+}
+/** Content - end **/
 
 
-/** footer **/
+/** Form **/
+form {
+	padding: 1em;
+	border: 1px solid #4682B4; /* SteelBlue */
+	background-color: #DCDCDC; /* Gainsboro */
+}
+
+form ul {
+	list-style: none;
+}
+label.lab {
+	display: block;
+}
+input[type="text"], input[type="password"], input[type="url"], input[type="email"], input.text, input.title, textarea, select {
+	margin: 0 0 0.5em;
+	padding: 3px;
+}
+/** subform **/
+form {
+	margin: 0 0 20px;
+}
+form ul ul {
+	margin: 10px 0px;
+}
+form ul li fieldset {
+	margin: 10px 0;
+	padding: 0 10px 10px;
+	border: 1px solid #808080; /* Gray */
+}
+form ul ul li fieldset {
+	margin: 0px;
+	border: none;
+	border-bottom: 1px solid #808080; /* Gray */
+}
+form ul ul ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+form ul li.subform ul li.subform {
+	margin: 0 10px 10px 0;
+}
+form ul li.subform ul li > button {
+	margin-left: 10px;
+}
+form ul li.subform ul ul li > button {
+	margin: 17px 0 0 0;
+}
+form ul li.subform ul ul li > input.product-name {
+	width: 200px;
+}
+
+form .buttons {
+	height: 30px;
+	padding: 20px 0 0;
+}
+form .buttons div.submit-element {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+/** Form Errors **/
+form ul.errors {
+	margin: 0 0 10px;
+	color: #B22222; /* FireBrick */
+}
+form ul.errors::before {
+	border: 1px solid #B22222;
+}
+/** Form - end **/
+
+
+/** Footer **/
 footer {
 	padding: 10px;
 	background-color: #F0F8FF;
-	color: #5F9EA0; /** CadetBlue **/
+	color: #4682B4; /** SteelBlue **/
 }
 
 footer p {
 	margin-bottom: 5px;
 }
+/** Footer - end **/

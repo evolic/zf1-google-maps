@@ -1,21 +1,28 @@
+<?php
+$this->headScript()
+    ->prependFile('/js/subform.js')
+    ;
+?>
+
 <h1><?php echo $this->title; ?></h1>
+<h3>A sample of using <em>Zend_Form_SubForm</em> class, provided with <a href="http://framework.zend.com/">Zend Framework</a> 1.x</h3>
+
+<?php if ($_POST): ?>
+<p class="<?php echo $this->valid ? 'success' : 'error'; ?>">The form is <?php echo $this->valid ? '' : 'not '; ?>valid</p>
+<?php endif; ?>
 
 <?php echo $this->form; ?>
 
-<?php if ($_POST): ?>
-<p class="<?php if (!$this->valid) { echo 'error'; } ?>">The form is <?php echo $this->valid ? '' : 'not '; ?>valid</p>
-<?php endif; ?>
-
 <?php if ($this->messages): ?>
 <p class="label"><strong>Form error messages</strong>:</p>
-<pre>
+<pre class="error">
 <?php print_r($this->messages); ?>
 </pre>
 <?php endif; ?>
 
 <?php if ($this->values): ?>
 <p class="label"><strong>Form values</strong>:</p>
-<pre>
+<pre class="info">
 <?php print_r($this->values); ?>
 </pre>
 <?php endif; ?>

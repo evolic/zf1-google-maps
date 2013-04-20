@@ -17,3 +17,14 @@
 .cb {
     clear: both;
 }
+
+form input.number {
+	text-align: right;
+}
+
+form input.long-50  { width: 50px; }
+form input.long-100 { width: 100px; }
+form input.long-150 { width: 150px; }
+form input.long-200 { width: 200px; }
+form input.long-250 { width: 250px; }
+form input.long-300 { width: 300px; }

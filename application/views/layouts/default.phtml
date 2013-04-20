@@ -9,6 +9,7 @@
         ->appendStylesheet('/css/blueprint/screen.css', 'screen, projection')
         ->appendStylesheet('/css/blueprint/print.css', 'print')
         ->appendStylesheet('/css/blueprint/ie.css', 'screen, projection', 'lt IE 8')
+        ->appendStylesheet('/css/html5.css', 'screen, projection', 'lt IE 9')
         ->appendStylesheet('/css/style.css')
         ->appendStylesheet('/css/general.css')
         ->appendStylesheet('/css/style.css')
@@ -17,7 +18,10 @@
         ;
 
     $this->headScript()
-        ->prependFile('/js/subform.js')
+        ->prependFile('http://html5shim.googlecode.com/svn/trunk/html5.js', 'text/javascript', array(
+            'conditional' => 'lt IE 9'
+        ))
+        ->prependFile('/js/jquery-1.9.1.min.js')
         ;
 ?>
 <?php echo $this->headTitle(); ?>
@@ -30,9 +34,11 @@
 <div id="container">
   <header>
     <nav>
-      <ul>
-        <li role="navigation"><a href="/">Home</a></li>
-        <li role="navigation"><a href="/index/subform">SubForm</a></li>
+      <ul role="menu">
+        <li role="menuitem"><a href="/">Home</a></li>
+        <li role="menuitem"><a href="/index/subform">Example</a></li>
+        <li role="menuitem"><a href="/index/source-code">Source code</a></li>
+        <li role="menuitem"><a href="/index/credits">Credits</a></li>
       </ul>
       <div class="cb"></div>
     </nav>
