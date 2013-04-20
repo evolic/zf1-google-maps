@@ -45,7 +45,11 @@ header nav ul:after {
 p {
 	margin: 5px 0 10px;
 }
+p.label {
+	margin: 5px 0 0;
+}
 pre {
+	margin: 5px 0 15px;
 	background-color: #F5F5DC; /** Beige  **/
 }
 

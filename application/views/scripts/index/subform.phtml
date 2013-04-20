@@ -1,0 +1,23 @@
+<h1><?php echo $this->title; ?></h1>
+
+<?php echo $this->form; ?>
+
+<p>The form is <?php echo $this->valid ? '' : 'not '; ?>valid</p>
+<?php if ($this->messages): ?>
+<pre>
+<?php print_r($this->messages); ?>
+</pre>
+<pre>
+<?php print_r($this->values); ?>
+</pre>
+<?php /*?><ul>
+<?php foreach ($this->messages as $message): ?>
+<li><?php echo $message; ?></li>
+<?php endforeach; ?>
+</ul><?php */?>
+<?php endif; ?>
+
+<p class="label"><strong>POST</strong>:</p>
+<pre>
+<?php print_r($_POST); ?>
+</pre>

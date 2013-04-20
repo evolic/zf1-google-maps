@@ -1,0 +1,56 @@
+<?php echo $this->doctype() . PHP_EOL; ?>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<base href="<?php echo $this->baseUrl(); ?>" />
+<?php
+    // add default styles
+    $this->headLink()
+        ->appendStylesheet('/css/blueprint/screen.css', 'screen, projection')
+        ->appendStylesheet('/css/blueprint/print.css', 'print')
+        ->appendStylesheet('/css/blueprint/ie.css', 'screen, projection', 'lt IE 8')
+        ->appendStylesheet('/css/style.css')
+        ->appendStylesheet('/css/general.css')
+        ->appendStylesheet('/css/style.css')
+        ->appendStylesheet('/css/ie6.css', 'screen, projection', 'IE 6')
+        ->appendStylesheet('/css/ie.css', '', 'IE')
+        ;
+
+    $this->headScript()
+        ->prependFile('/js/subform.js')
+        ;
+?>
+<?php echo $this->headTitle(); ?>
+<?php echo $this->headMeta() . PHP_EOL; ?>
+<?php echo $this->headLink() . PHP_EOL; ?>
+<?php echo $this->headScript() . PHP_EOL; ?>
+
+</head>
+<body>
+<div id="container">
+  <header>
+    <nav>
+      <ul>
+        <li role="navigation"><a href="/">Home</a></li>
+        <li role="navigation"><a href="/index/subform">SubForm</a></li>
+      </ul>
+      <div class="cb"></div>
+    </nav>
+  </header>
+  <section>
+    <article id="content">
+<?php echo $this->layout()->content; ?>
+    </article>
+  </section>
+  <footer>
+<?php $year = (int) date('Y'); ?>
+    <p>Copyright &copy; 2013<?php if ($year !== 2013) { echo '-' . $year; } ?> Tomasz Kuter. All rights reserved!</p>
+  </footer>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	// Handler for .ready() called.
+});
+</script>
+</body>
+</html>
