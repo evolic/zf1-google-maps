@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+#container {
+	width: 790px;
+	margin: 0 auto;
+}
+
+ul, ol, li, p, div, h1, h2, h3, h4, h5, h6, form, fieldset, input {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+ol li{
+    margin-left:25px;
+}
+fieldset{
+  border:none;
+}
+
+/** header **/
+header {
+	
+}
+header nav {
+    background-color: #F0F8FF; /** AliceBlue **/
+}
+header nav ul {
+    list-style: none;
+    display: block;
+    margin: 0 0 10px;
+}
+header nav ul li {
+	float: left;
+	display: block;
+    margin: 10px 0px 10px 10px;
+}
+header nav ul:after {
+	clear: both;
+}
+
+
+
+
+/** content **/
+p {
+	margin: 5px 0 10px;
+}
+pre {
+	background-color: #F5F5DC; /** Beige  **/
+}
+
+
+
+/** footer **/
+footer {
+	padding: 10px;
+	background-color: #F0F8FF;
+	color: #5F9EA0; /** CadetBlue **/
+}
+
+footer p {
+	margin-bottom: 5px;
+}
