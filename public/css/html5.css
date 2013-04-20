@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+
+header, nav, section, article, aside, footer, hgroup { 
+    display: block;
+}
