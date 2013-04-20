@@ -11,8 +11,6 @@ class Form_SubForm extends App_Form_BaseForm
     {
         parent::init();
 
-        $this->setAction('/');
-
         $name = new Zend_Form_Element_Text('name');
         $name->setLabel('Name')
             ->setRequired(true);

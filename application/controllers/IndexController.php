@@ -27,6 +27,7 @@ class IndexController extends Zend_Controller_Action
         $this->view->title = $title;
 
         $form = new Form_SubForm();
+        $form->setAction($this->view->url(array('controller'=>'index', 'action'=>'subform')));
         $this->view->form = $form;
     }
 
