@@ -1,3 +1,4 @@
 /.settings
 /.buildpath
 /var/log/*.log
+/application/configs/maps.ini

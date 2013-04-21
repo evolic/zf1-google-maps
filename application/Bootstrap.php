@@ -76,4 +76,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         Zend_Session::start();
     }
+
+    protected function _initGoogleMaps()
+    {
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/maps.ini', 'api');
+        Zend_Registry::set('Maps_Config', $config->toArray());
+
+        $log = Zend_Registry::get('log');
+        $log->info($config->toArray());
+    }
 }

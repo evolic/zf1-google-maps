@@ -1,0 +1,9 @@
+<?php
+$maps_config = Zend_Registry::get('Maps_Config');
+$api_key = $maps_config['maps']['API_Key'];
+?>
+<?php
+$this->headScript()
+    ->appendFile('https://maps.googleapis.com/maps/api/js?key=' . $api_key . '&sensor=false')
+    ;
+?>

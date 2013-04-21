@@ -13,6 +13,7 @@
         ->appendStylesheet('/css/style.css')
         ->appendStylesheet('/css/general.css')
         ->appendStylesheet('/css/style.css')
+        ->appendStylesheet('/css/maps.css')
         ->appendStylesheet('/css/ie6.css', 'screen, projection', 'IE 6')
         ->appendStylesheet('/css/ie.css', '', 'IE')
         ;
@@ -26,6 +27,7 @@
 ?>
 <?php echo $this->headTitle(); ?>
 <link rel="shortcut icon" href="<?php echo $this->baseUrl(); ?>/favicon.ico" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <?php echo $this->headMeta() . PHP_EOL; ?>
 <?php echo $this->headLink() . PHP_EOL; ?>
 <?php echo $this->headScript() . PHP_EOL; ?>
@@ -37,7 +39,9 @@
     <nav>
       <ul role="menu">
         <li role="menuitem"><a href="/">Home</a></li>
-        <li role="menuitem"><a href="/index/subform">Example</a></li>
+        <!-- <li role="menuitem"><a href="/index/subform">Example</a></li> -->
+        <li role="menuitem"><a href="/index/maps-first">1st example</a></li>
+        <li role="menuitem"><a href="/index/maps-second">2nd example</a></li>
         <!-- <li role="menuitem"><a href="/index/source-code">Source code</a></li> -->
         <li role="menuitem"><a href="/index/credits">Credits</a></li>
         <li role="menuitem" class="portfolio fr"><a href="http://evolic.eu5.org/">My portfolio</a></li>
