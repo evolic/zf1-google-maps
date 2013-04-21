@@ -77,6 +77,13 @@ class IndexController extends Zend_Controller_Action
         $this->view->title = $title;
     }
 
+    public function mapsThirdAction()
+    {
+        // action body
+        $title = 'Third example';
+        $this->view->title = $title;
+    }
+
     public function creditsAction()
     {
         // action body

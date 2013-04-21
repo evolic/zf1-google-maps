@@ -1,0 +1,23 @@
+<?php echo $this->partial('partials/init-maps.phtml', array()); ?>
+<?php
+$this->headScript()
+    ->appendFile('/js/maps.3rd.js')
+    ;
+?>
+
+<h1><?php echo $this->title; ?></h1>
+
+<h2>Geocoding</h2>
+
+<div id="lat-lng"></div>
+<div id="marker"></div>
+<div id="lat"></div>
+<div id="lng"></div>
+<div class="cb"></div>
+
+<form action="" method="post">
+  <input type="text" id="address" name="address" style="width: 300px;" value="Węgorzewo, Armii Krajowej 10" />
+  <button type="button" onclick="codeAddress()">Find address localization</button>
+</form>
+
+<div id="map-canvas" />
