@@ -23,9 +23,13 @@ fieldset{
 
 /** Header **/
 header {
-	
+	display: block;
+	overflow: auto;
 }
-header nav {
+nav {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
 	background-color: #F0F8FF; /* AliceBlue */
 }
 header nav ul {
@@ -38,8 +42,8 @@ header nav ul li {
 	display: block;
 	margin: 10px 0px 10px 10px;
 }
-header nav ul:after {
-	clear: both;
+header nav ul li.portfolio {
+	margin-right: 10px;
 }
 /** Header - end **/
 
