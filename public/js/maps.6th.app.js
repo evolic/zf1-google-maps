@@ -20,6 +20,7 @@ $(document).ready(function() {
 
     // clear previous drawing
     deleteSelectedShape();
+    deleteSelectedMarker();
     // change mode
     drawingManager.setOptions({
       drawingControlOptions: {

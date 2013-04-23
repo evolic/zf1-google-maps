@@ -1,4 +1,3 @@
-
   var drawingManager;
   var selectedShape;
   var selectedMarker;
@@ -27,6 +26,10 @@
     selectColor(shape.get('fillColor') || shape.get('strokeColor'));
   }
 
+  function setSelection(marker) {
+    selectedMarker = marker;
+  }
+
   function deleteSelectedShape() {
     if (selectedShape) {
       selectedShape.setMap(null);
@@ -35,6 +38,16 @@
      drawingManager.setOptions({
        drawingControl: true
      });
+  }
+
+  function deleteSelectedMarker() {
+    if (selectedMarker) {
+      selectedMarker.setMap(null);
+    }
+    // To show:
+    drawingManager.setOptions({
+      drawingControl: true
+    });
   }
 
   function selectColor(color) {
@@ -173,7 +186,11 @@
         google.maps.event.addListener(newMarker, 'dragend', function(event) {
           console.log(event, 'event');
           console.log(newMarker.position.toString(), 'position');
+          setSelection(newMarker);
+          $('#coords').val(newMarker.position.toString());
         });
+        setSelection(newMarker);
+        $('#coords').val(newMarker.position.toString());
       }
     });
 
