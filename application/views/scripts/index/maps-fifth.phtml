@@ -1,0 +1,23 @@
+<?php echo $this->partial('partials/init-maps.phtml', array()); ?>
+<?php
+$this->headScript()
+    ->appendFile('/js/maps.5th.js')
+    ;
+?>
+
+<h1><?php echo $this->title; ?></h1>
+
+<h2>Drawing tools</h2>
+
+<div id="lat-lng"></div>
+<div id="marker"></div>
+<div id="lat"></div>
+<div id="lng"></div>
+<div class="cb"></div>
+
+<form action="" method="post">
+  <input type="text" id="coords" name="coords" style="width: 300px;" value="(54.12555975898535, 21.68217234313488)" />
+  <button type="button" onclick="showLocalizationByCoords()">Show localization</button>
+</form>
+
+<div id="map-canvas" />

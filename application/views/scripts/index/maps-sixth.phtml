@@ -1,0 +1,31 @@
+<?php echo $this->partial('partials/init-maps.phtml', array()); ?>
+<?php
+$this->headLink()
+    ->appendStylesheet('/css/maps.6th.css', 'screen, projection')
+;
+
+$this->headScript()
+    ->appendFile('/js/maps.6th.js')
+    ->appendFile('/js/maps.6th.app.js')
+    ;
+?>
+
+<h1><?php echo $this->title; ?></h1>
+
+<h2>Example of using DrawingManager</h2>
+
+<div id="panel">
+  <div id="color-palette"></div>
+  <div>
+    <button id="delete-button">Delete Selected Shape</button>
+  </div>
+  <div style="clear: both; margin: 10px 0;">
+    <strong>Mode:</strong><br />
+    <input name="mode" type="radio" value="1" /> Single point<br />
+    <input name="mode" type="radio" value="2" /> A few points<br />
+    <input name="mode" type="radio" value="4" checked="checked" /> Area<br />
+    <br />
+    <textarea id="coords" style="width: 198px; height: 298px;"></textarea>
+  </div>
+</div>
+<div id="map"></div>
