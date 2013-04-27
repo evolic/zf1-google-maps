@@ -146,8 +146,9 @@
 
     function overlayClickListener(overlay) {
       google.maps.event.addListener(overlay, "mouseup", function(event){
-        $('#coords').val(overlay.getPath().getArray());
+        $('#coords').val(overlay.getPath().getArray().join());
       });
+      $('#coords').val(overlay.getPath().getArray().join());
     }
 
     google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
@@ -172,6 +173,15 @@
         });
         setSelection(newShape);
         overlayClickListener(newShape);
+        // update coords after shape modification
+        google.maps.event.addListener(newShape.getPath(), 'set_at', function() {
+          console.log('Vertex moved on outer path.');
+          $('#coords').val(this.getArray().join());
+        });
+        google.maps.event.addListener(newShape.getPath(), 'insert_at', function() {
+          console.log('Vertex added to inner path.');
+          $('#coords').val(this.getArray().join());
+        });
       } else {
         // Switch back to non-drawing mode after putting marker on the map
         drawingManager.setDrawingMode(null);
