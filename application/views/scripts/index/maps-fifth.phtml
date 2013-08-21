@@ -1,5 +1,9 @@
 <?php echo $this->partial('partials/init-maps.phtml', array()); ?>
 <?php
+$this->headLink()
+    ->appendStylesheet('/css/maps.5th.css')
+    ;
+
 $this->headScript()
     ->appendFile('/js/maps.5th.js')
     ;
