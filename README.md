@@ -3,6 +3,11 @@ Google Maps JavaScript API v3 examples
 
 Zend Framework 1.x tutorial application with **Google Maps JavaScript API v3** examples
 
+## Live version
+
+All examples of this application can be found at the following link:
+http://google-maps-examples.sandbox.tomaszkuter.com/
+
 ## Credits
 
 Below you can find information about used technologies and projects
