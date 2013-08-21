@@ -51,7 +51,10 @@ header nav ul li a:hover {
     text-decoration: none;
 }
 header nav ul li:first-child {
-	padding: 10px;
+	padding: 10px 10px 10px 25px;
+    background-image: url(../i/ico/bijou/House.png);
+    background-repeat: no-repeat;
+    background-position: 11px 13px;
 }
 
 header nav ul li.example {
